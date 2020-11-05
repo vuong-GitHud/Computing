@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- title %></title>
+    <link rel="stylesheet" href="css/payment.css">
+    <script>
+        function culcalate1() {
+            var a = Number(document.getElementById("txtno1").value);
+            var b = Number(document.getElementById("txtno2").value);
+            var sum = a + b;
+            document.getElementById("txtno3").value = sum;
+        }
+    </script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-75">
+          <div class="container">
+            <form action="/action_page.php">
+      
+              <div class="row">
+                <div class="col-50">
+                  <h3>Billing Address</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Name">
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="Email">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text" id="adr" name="address" placeholder="Street">
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input type="text" id="city" name="city" placeholder="City">
+                </div>
+                <div class="col-50">
+                  <h3>Payment</h3>
+                  <label for="fname">Accepted Cards</label>
+                  <div class="icon-container">
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                  </div>
+                  <label for="cname">Name on Card</label>
+                  <input type="text" id="cname" name="cardname" placeholder="name">
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="number">
+                  <label for="expmonth">Exp Month</label>
+                  <input type="text" id="expmonth" name="expmonth" placeholder="Month">
+                </div>
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+              </label>
+              <input type="submit" value="Continue to checkout" class="btn">
+            </form>
+          </div>
+        </div>
+        <div class="col-25">
+          <div class="container">
+            <h4>Cart
+              <span class="price" style="color:black">
+                <i class="fa fa-shopping-cart"></i>
+              </span>
+            </h4>
+            <fieldset>
+                <table>
+                    <legend> Bill customer</legend>
+                    <tr>
+                        <td>Money01 :</td>
+                        <td>
+                            <input id="txtno1" type="text"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Money02 :</td>
+                        <td><input id="txtno2" type="text"><br></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Result :
+                        </td>
+                        <td><input id="txtno3" type="text"><br> </td>
+                    </tr>
+                    <td> <input type="button" value="culcalate" onclick="culcalate1();">
+                    </td>
+                </table>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

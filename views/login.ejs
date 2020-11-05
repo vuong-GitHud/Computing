@@ -1,0 +1,23 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
+        <form action="/login" method="post">
+          <div class="imgcontainer">
+            <img src="img/atn.png" alt="Avatar" class="avatar">
+          </div>
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="name" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <button type="submit">Login</button>
+          </div>
+          <div class="container" style="background-color: white">
+            <button type="button" class="cancelbtn"><a style="text-decoration: none; color: white;"  href="index">Cancel</a></button>
+            <span class="psw">Forgot <a href="register">password?</a></span>
+          </div>
+        </form>
+    </body>
+</html>
